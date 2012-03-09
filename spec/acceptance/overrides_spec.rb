@@ -3,10 +3,10 @@ require 'active_support/ordered_hash'
 
 describe "attribute overrides" do
   before do
-    define_model('User', :admin    => :boolean)
-    define_model('Post', :title    => :string,
-                         :secure   => :boolean,
-                         :user_id  => :integer) do
+    define_model('User', admin:   :boolean)
+    define_model('Post', title:   :string,
+                         secure:  :boolean,
+                         user_id: :integer) do
       belongs_to :user
 
       def secure=(value)
